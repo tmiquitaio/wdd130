@@ -3,13 +3,17 @@ nav {
     padding: 10px;
 }
 
-nav {
+nav a {
     color: white;
     display: block;
     padding: 20px;
 }
 
 h1 {
+    color: darkblue;
+}
+
+img {
     width: 150px;
     height: auto;
     border: 1px solid black;
