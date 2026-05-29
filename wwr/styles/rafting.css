@@ -42,7 +42,7 @@ article {
     padding: 8px;
 }
 
-/* Header Grid Layout */
+/* Header Layout */
 header {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -54,7 +54,7 @@ header img {
     width: 120px;
 }
 
-/* Navigation Flex Layout */
+/* Navigation Layout */
 nav ul {
     display: flex;
     list-style: none;
@@ -67,7 +67,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Hero Section */
+/* Hero Overlay */
 .hero {
     position: relative;
 }
@@ -101,7 +101,7 @@ nav a {
     margin-left: 15px;
 }
 
-/* History Section Two-Column Layout */
+/* History Grid Layout */
 .history-section h2 {
     margin-bottom: 10px;
 }
@@ -116,7 +116,7 @@ nav a {
     margin: 0;
 }
 
-/* Adventure Section (5 Images Horizontally) */
+/* Adventure Columns Layout */
 .adventure-section h2 {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -133,7 +133,6 @@ nav a {
     flex: 1;
     text-align: center;
     background-color: #eee;
-    /* Light backing for placeholders */
     padding: 5px;
     border-radius: 4px;
 }
@@ -143,7 +142,6 @@ nav a {
     height: auto;
     object-fit: cover;
     aspect-ratio: 1 / 1;
-    /* Makes your layout symmetrical like the wireframe */
 }
 
 .adventure-container figcaption {
@@ -152,7 +150,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Footer Flex Layout */
+/* Footer Element Configuration */
 footer {
     display: flex;
     justify-content: space-between;
