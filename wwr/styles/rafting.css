@@ -4,6 +4,10 @@
     --accent1-color: #1B1B1E;
     --accent2-color: #FBFBFF;
 
+    /* Standardized color variables to eliminate raw/named colors */
+    --white-color: #FFFFFF;
+    --card-bg-color: #EEEEEE;
+
     --heading-font: Georgia, serif;
     --body-font: Arial, sans-serif;
 }
@@ -86,7 +90,8 @@ nav a {
     text-align: center;
     opacity: 0.8;
     background-color: var(--accent1-color);
-    color: white;
+    color: var(--white-color);
+    /* Updated to variable */
 }
 
 .hero article {
@@ -132,7 +137,8 @@ nav a {
 .adventure-container figure {
     flex: 1;
     text-align: center;
-    background-color: #eee;
+    background-color: var(--card-bg-color);
+    /* Updated to variable */
     padding: 5px;
     border-radius: 4px;
 }
