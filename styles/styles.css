@@ -15,7 +15,7 @@ footer {
 
 /* NAVIGATION */
 nav {
-    background-color: steelblue;
+    background-color: darkblue;
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -28,7 +28,7 @@ nav a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #fff;
+    color: white;
 }
 
 /* HEADINGS */
@@ -56,6 +56,7 @@ main img {
 /* GRID LAYOUT */
 .grid {
     display: grid;
+    grid-template-columns: 1fr 3fr;
     align-items: center;
 }
 
@@ -68,6 +69,7 @@ main {
 /* ASIDE */
 aside {
     width: 20rem;
+    text-align: center;
     position: relative;
     grid-column: 1/2;
     grid-row: 1/2;
