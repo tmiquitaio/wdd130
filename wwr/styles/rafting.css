@@ -18,7 +18,6 @@ body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background-color: var(--accent2-color);
-    /* ✅ FIXED: now variable is used */
 }
 
 header,
@@ -32,6 +31,7 @@ h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
 }
 
 nav,
@@ -42,8 +42,7 @@ article {
     padding: 8px;
 }
 
-/* Header */
-
+/* Header Grid Layout */
 header {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -55,8 +54,7 @@ header img {
     width: 120px;
 }
 
-/* Navigation */
-
+/* Navigation Flex Layout */
 nav ul {
     display: flex;
     list-style: none;
@@ -70,7 +68,6 @@ nav a {
 }
 
 /* Hero Section */
-
 .hero {
     position: relative;
 }
@@ -104,14 +101,72 @@ nav a {
     margin-left: 15px;
 }
 
-/* Footer */
+/* History Section Two-Column Layout */
+.history-section h2 {
+    margin-bottom: 10px;
+}
 
+.history-container {
+    display: flex;
+    gap: 20px;
+}
+
+.history-container p {
+    flex: 1;
+    margin: 0;
+}
+
+/* Adventure Section (5 Images Horizontally) */
+.adventure-section h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.adventure-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 16px;
+}
+
+.adventure-container figure {
+    flex: 1;
+    text-align: center;
+    background-color: #eee;
+    /* Light backing for placeholders */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.adventure-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    /* Makes your layout symmetrical like the wireframe */
+}
+
+.adventure-container figcaption {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* Footer Flex Layout */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
     border-top: 1px solid #ccc;
+    padding: 16px 0;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .socialmedia a {
