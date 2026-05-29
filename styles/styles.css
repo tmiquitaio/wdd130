@@ -5,22 +5,37 @@
     box-sizing: border-box;
 }
 
-/* NAVIGATION*/
+/* HEADER, GRID, FOOTER */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* NAVIGATION */
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
-    display: inline-block;
-    padding: 20px;
+    display: block;
+    padding: 0.5rem;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
 }
 
 /* HEADINGS */
 h1 {
     color: darkblue;
+    border-bottom: 2px solid darkblue;
+    padding-bottom: 0.5rem;
 }
 
 /* IMAGES */
@@ -32,22 +47,30 @@ img {
     box-shadow: 0 0 30px gray;
 }
 
-/* Float profile image */
+/* FLOAT PROFILE IMAGE */
 main img {
     float: right;
     margin: 0 0 1rem 1rem;
 }
 
-/* MAIN LAYOUT */
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+/* MAIN */
 main {
-    max-width: 840px;
+    grid-column: 2/3;
+    margin: 1rem;
 }
 
 /* ASIDE */
 aside {
     width: 20rem;
-    text-align: center;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
@@ -55,7 +78,7 @@ aside img {
     height: auto;
 }
 
-/* Overlay heading on image */
+/* OVERLAY HEADING ON IMAGE */
 aside h2 {
     position: absolute;
     top: 10px;
