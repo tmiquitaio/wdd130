@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+      content="Contact Rapids Rafting Company. Reach out to book your next white water rafting adventure, ask questions, or provide feedback.">
+    <meta name="author" content="Tembo Miquitaio">
+
+    <title>Contact Us | Rapids Rafting Company</title>
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.jpg" alt="Rafting Company Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Company Information & Title -->
+        <section class="company-info">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street</p>
+            <p>Kolob, California</p>
+            <p>+1 999 999 9999</p>
+            <p><a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
+        </section>
+
+        <!-- Map and Contact Form Grid Section -->
+        <div class="contact-grid">
+            <section class="map-container">
+                <!-- Google Map Embed (Note: Inline style="border:0" removed per instructions) -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d-122.4194155!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807bed80098f%3A0x2ad1b1912443fa38!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1565305000000!5m2!1sen!2sus"
+                  width="600" height="450" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+
+            <section class="form-container">
+                <form action="#" method="post">
+                    <div class="form-item">
+                        <label for="user-name">Name</label>
+                        <input type="text" id="user-name" name="userName"
+                          placeholder="Your Full Name" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="user-email">Email</label>
+                        <input type="email" id="user-email" name="userEmail"
+                          placeholder="Your Email Address" required>
+                    </div>
+
+                    <fieldset class="form-item">
+                        <legend>Message Purpose</legend>
+                        <label>
+                            <input type="radio" name="purpose" value="general" checked> General
+                            Inquiry
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="reservation"> Reservation
+                            Question
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="suggestion"> Website
+                            Suggestion
+                        </label>
+                    </fieldset>
+
+                    <div class="form-item">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="userMessage" rows="5"
+                          placeholder="Type here..." required></textarea>
+                    </div>
+
+                    <div class="form-item checkbox-item">
+                        <label>
+                            <input type="checkbox" name="subscribe" value="yes"> Please subscribe me
+                            to the monthly newsletter
+                        </label>
+                    </div>
+
+                    <button type="submit">Get in Touch!</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Employee Profile Section -->
+        <section class="employee-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Tembo A Miquitaio, Founder & Chief Guide">
+                    <figcaption><strong>Tembo A Miquitaio</strong><br>Founder & Chief Guide
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Elmara P Smith, Safety Coordinator">
+                    <figcaption><strong>Elmara P Smith</strong><br>Safety Coordinator</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Alex D Rivera, Logistics Manager">
+                    <figcaption><strong>Alex D Rivera</strong><br>Logistics Manager</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Rapids Rafting Company | Tembo Miquitaio
+        </p>
+
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook Icon">
+            </a>
+
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
