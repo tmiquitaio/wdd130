@@ -66,18 +66,21 @@
 
                     <fieldset class="form-item">
                         <legend>Message Purpose</legend>
-                        <label for="purpose-general">
+                        <div class="radio-group">
                             <input type="radio" id="purpose-general" name="purpose" value="general"
-                              checked> General Inquiry
-                        </label>
-                        <label for="purpose-reservation">
+                              checked>
+                            <label for="purpose-general">General Inquiry</label>
+                        </div>
+                        <div class="radio-group">
                             <input type="radio" id="purpose-reservation" name="purpose"
-                              value="reservation"> Reservation Question
-                        </label>
-                        <label for="purpose-suggestion">
+                              value="reservation">
+                            <label for="purpose-reservation">Reservation Question</label>
+                        </div>
+                        <div class="radio-group">
                             <input type="radio" id="purpose-suggestion" name="purpose"
-                              value="suggestion"> Website Suggestion
-                        </label>
+                              value="suggestion">
+                            <label for="purpose-suggestion">Website Suggestion</label>
+                        </div>
                     </fieldset>
 
                     <div class="form-item">
@@ -87,10 +90,10 @@
                     </div>
 
                     <div class="form-item checkbox-item">
-                        <label for="subscribe-newsletter">
-                            <input type="checkbox" id="subscribe-newsletter" name="subscribe"
-                              value="yes"> Please subscribe me to the monthly newsletter
-                        </label>
+                        <input type="checkbox" id="subscribe-newsletter" name="subscribe"
+                          value="yes">
+                        <label for="subscribe-newsletter">Please subscribe me to the monthly
+                            newsletter</label>
                     </div>
 
                     <button type="submit">Get in Touch!</button>
