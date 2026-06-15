@@ -39,8 +39,7 @@ h2 {
 
 nav,
 p,
-section,
-article {
+section {
     margin: 16px;
     padding: 8px;
 }
@@ -92,37 +91,41 @@ nav a {
     color: var(--white-color);
 }
 
-.hero article {
+/* Updated selector to match the polished semantic HTML */
+.hero .mission-statement {
     position: absolute;
     bottom: 20px;
     background-color: rgba(255, 255, 255, 0.8);
+    margin: 16px;
+    padding: 8px;
 }
 
-.hero article img {
+.hero .mission-statement img {
     float: right;
     width: 125px;
     margin-left: 15px;
 }
 
-/* History Grid Layout */
+/* Symmetrical 3-Column History Grid Layout Upgraded */
 .history-section h2 {
     margin-bottom: 10px;
 }
 
 .history-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 20px;
     margin: 0 16px;
 }
 
 .history-container p {
-    flex: 1;
     margin: 0;
+    padding: 0;
 }
 
 .history-container img {
-    width: 220px;
+    width: 100%;
     height: 160px;
     object-fit: cover;
     border-radius: 4px;
@@ -341,7 +344,6 @@ footer {
    Homepage 
    ========================================================================== */
 
-/* Main hero card container */
 .hero .hero-box {
     position: absolute;
     top: 50%;
@@ -357,7 +359,6 @@ footer {
     z-index: 2;
 }
 
-/* Overrides the global '.hero h1' styling to resolve overlap issues */
 .hero .hero-box h1 {
     position: static;
     width: auto;
@@ -392,7 +393,6 @@ footer {
     color: var(--white-color);
 }
 
-/* Homepage main grid feature styling rules */
 .home-grid-section {
     margin-top: 40px;
 }
@@ -435,7 +435,6 @@ footer {
     line-height: 1.5;
 }
 
-/* Split layout banner container for lower split row */
 .newsletter-section {
     margin: 40px 16px;
     background-color: var(--primary-color);
@@ -463,7 +462,6 @@ footer {
     line-height: 1.6;
 }
 
-/* Sub-form container styling inside lower row layout */
 .newsletter-form {
     background-color: var(--white-color);
     color: var(--accent1-color);
