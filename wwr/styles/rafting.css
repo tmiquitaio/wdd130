@@ -91,7 +91,6 @@ nav a {
     color: var(--white-color);
 }
 
-/* FIXED: Changed selector to '.hero article' to pass the automated grading checks */
 .hero article {
     position: absolute;
     bottom: 20px;
@@ -100,7 +99,6 @@ nav a {
     padding: 8px;
 }
 
-/* FIXED: Changed selector to '.hero article img' to pass the automated grading checks */
 .hero article img {
     float: right;
     width: 125px;
