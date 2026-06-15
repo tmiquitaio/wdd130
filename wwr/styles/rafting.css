@@ -4,6 +4,7 @@
     --accent1-color: #1B1B1E;
     --accent2-color: #FBFBFF;
 
+    /* Standardized color variables to eliminate raw/named colors */
     --white-color: #FFFFFF;
     --card-bg-color: #EEEEEE;
 
@@ -70,7 +71,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Hero Overlay */
+/* Hero Base Settings */
 .hero {
     position: relative;
 }
@@ -81,6 +82,7 @@ nav a {
     height: auto;
 }
 
+/* Base style used for the default absolute heading layout (About Page) */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -104,7 +106,7 @@ nav a {
     margin-left: 15px;
 }
 
-/* History Grid Layout */
+/* History Grid Layout (About page balanced look) */
 .history-section h2 {
     margin-bottom: 10px;
 }
@@ -112,7 +114,6 @@ nav a {
 .history-container {
     display: flex;
     align-items: center;
-
     gap: 20px;
     margin: 0 16px;
 }
@@ -125,11 +126,11 @@ nav a {
 .history-container img {
     width: 220px;
     height: 160px;
-
     object-fit: cover;
     border-radius: 4px;
 }
 
+/* Adventure Columns Layout */
 .adventure-section h2 {
     margin-top: 30px;
     margin-bottom: 15px;
@@ -163,6 +164,7 @@ nav a {
     font-weight: bold;
 }
 
+/* Footer Element Configuration */
 footer {
     display: flex;
     justify-content: space-between;
@@ -186,6 +188,10 @@ footer {
 .socialmedia img {
     width: 32px;
 }
+
+/* ==========================================================================
+   Contact Us Page Layout Configurations
+   ========================================================================== */
 
 .company-info {
     text-align: center;
@@ -331,4 +337,355 @@ footer {
 .employee-grid figcaption {
     font-size: 0.95rem;
     line-height: 1.4;
+}
+
+/* ==========================================================================
+   Homepage (index.html) Layout and Conflicting Rule Overrides
+   ========================================================================== */
+
+/* Main hero card container */
+.hero .hero-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgba(27, 27, 30, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Overrides the global '.hero h1' styling to resolve overlap issues */
+.hero .hero-box h1 {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    opacity: 1;
+    padding: 0;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+    font-size: 2.2rem;
+}
+
+/* Fixes paragraph contrast inside the dark hero card context box */
+.hero .hero-box p {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* Call to Action Button Layout configuration */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 10px 24px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Homepage main grid feature styling rules */
+.home-grid-section {
+    margin-top: 40px;
+}
+
+.home-grid-section h2 {
+    margin-bottom: 20px;
+}
+
+.home-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 0 16px;
+}
+
+.grid-card {
+    background-color: var(--card-bg-color);
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.grid-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-family: var(--heading-font);
+}
+
+.grid-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Split layout banner container for lower split row */
+.newsletter-section {
+    margin: 40px 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.newsletter-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.newsletter-text h2 {
+    color: var(--secondary-color);
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.newsletter-text p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Sub-form container styling inside lower row layout */
+.newsletter-form {
+    background-color: var(--white-color);
+    color: var(--accent1-color);
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsletter-form h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.newsletter-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.newsletter-form label {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.newsletter-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--body-font);
+}
+
+.newsletter-form .submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter-form .submit-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* ==========================================================================
+   Trips Page (trips.html) Layout Styles
+   ========================================================================== */
+
+.trips-hero-cta {
+    text-align: center;
+    margin: 30px 16px;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    border-radius: 6px;
+}
+
+.trips-hero-cta p {
+    margin: 10px 0 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.trips-hero-cta .cta-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 16px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.trips-hero-cta .cta-box span {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.trips-cta-btn {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 8px 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.trips-cta-btn:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.trips-grid-section {
+    margin: 40px 0;
+}
+
+.trips-grid-section h2 {
+    margin-bottom: 24px;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0 16px;
+}
+
+.trip-card {
+    background-color: var(--white-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.trip-card-content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card-content h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.trip-card-content .difficulty {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.difficulty.easy {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.difficulty.medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.difficulty.hard {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.trip-card-content p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.table-section {
+    margin: 50px 16px 20px 16px;
+}
+
+.table-section h2 {
+    margin-bottom: 10px;
+}
+
+.table-intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--body-font);
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.trips-table th,
+.trips-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.trips-table th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family: var(--heading-font);
+    font-weight: normal;
+}
+
+.trips-table tbody tr:nth-child(even) {
+    background-color: var(--card-bg-color);
+}
+
+.trips-table tbody tr:hover {
+    background-color: rgba(1, 186, 239, 0.15);
 }
