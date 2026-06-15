@@ -4,7 +4,6 @@
     --accent1-color: #1B1B1E;
     --accent2-color: #FBFBFF;
 
-    /* Standardized color variables to eliminate raw/named colors */
     --white-color: #FFFFFF;
     --card-bg-color: #EEEEEE;
 
@@ -82,7 +81,6 @@ nav a {
     height: auto;
 }
 
-/* Base style used for the default absolute heading layout (About Page) */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -106,7 +104,7 @@ nav a {
     margin-left: 15px;
 }
 
-/* History Grid Layout (About page balanced look) */
+/* History Grid Layout */
 .history-section h2 {
     margin-bottom: 10px;
 }
@@ -340,7 +338,7 @@ footer {
 }
 
 /* ==========================================================================
-   Homepage (index.html) Layout and Conflicting Rule Overrides
+   Homepage 
    ========================================================================== */
 
 /* Main hero card container */
@@ -371,7 +369,6 @@ footer {
     font-size: 2.2rem;
 }
 
-/* Fixes paragraph contrast inside the dark hero card context box */
 .hero .hero-box p {
     color: var(--white-color);
     font-size: 1.2rem;
@@ -379,7 +376,6 @@ footer {
     padding: 0;
 }
 
-/* Call to Action Button Layout configuration */
 .cta-button {
     display: inline-block;
     background-color: var(--secondary-color);
@@ -519,7 +515,7 @@ footer {
 }
 
 /* ==========================================================================
-   Trips Page (trips.html) Layout Styles
+   Trips Page
    ========================================================================== */
 
 .trips-hero-cta {
